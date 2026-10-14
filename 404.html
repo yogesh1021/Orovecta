@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 - Page Not Found | Orovecta</title>
+    <meta name="description" content="The requested page could not be found on Orovecta.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Favicons -->
+    <link href="favicon/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Existing Website CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/about.css" rel="stylesheet">
+
+    <!-- Internal CSS Only -->
+    <style>
+        html {
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background: #f5f7fa;
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+
+        /* Header */
+        #header {
+            background: #ffffff;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+            z-index: 999;
+        }
+
+        #header .logo {
+            margin: 0;
+            line-height: 1;
+        }
+
+        #header .logo img {
+            max-width: 190px;
+            max-height: 65px;
+            object-fit: contain;
+        }
+
+        /* Navigation */
+        #navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: #101820;
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        #navbar a:hover {
+            color: #d6a600;
+        }
+
+        #navbar .dropdown {
+            position: relative;
+        }
+
+        #navbar .dropdown > ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 230px;
+            padding: 10px 0;
+            background: #ffffff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+            z-index: 1000;
+        }
+
+        #navbar .dropdown:hover > ul,
+        #navbar .dropdown:focus-within > ul {
+            display: flex;
+        }
+
+        #navbar .dropdown > ul a {
+            display: block;
+            padding: 10px 18px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        #navbar .mobile-nav-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #101820;
+        }
+
+        /* Main Error Section */
+        .error-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 125px 15px 60px;
+        }
+
+        .error-content {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .error-number {
+            font-size: clamp(100px, 18vw, 170px);
+            font-weight: 800;
+            line-height: 1;
+            color: #101820;
+            letter-spacing: -5px;
+        }
+
+        .error-number span {
+            color: #FEC513;
+        }
+
+        .error-icon {
+            font-size: 45px;
+            color: #b68a00;
+            background: #fff1bd;
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-title {
+            font-size: clamp(26px, 4vw, 38px);
+            font-weight: 700;
+            color: #101820;
+        }
+
+        .error-description {
+            color: #626b75;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .error-btn {
+            background: #FEC513;
+            color: #101820;
+            border: 2px solid #FEC513;
+            padding: 13px 27px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .error-btn:hover {
+            background: #101820;
+            border-color: #101820;
+            color: #ffffff;
+        }
+
+        .error-contact {
+            color: #101820;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .error-contact:hover {
+            color: #b68a00;
+        }
+
+        /* Footer */
+        #footer {
+            width: 100%;
+            margin-top: auto;
+        }
+
+        #footer .footer-map iframe {
+            width: 100%;
+            height: 200px;
+            border: 0;
+        }
+
+        /* Responsive Navigation */
+        @media (max-width: 991px) {
+            #navbar .mobile-nav-toggle {
+                display: block;
+            }
+
+            #navbar ul {
+                display: none;
+                position: absolute;
+                top: 75px;
+                right: 15px;
+                left: 15px;
+                background: #ffffff;
+                padding: 15px;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            #navbar.navbar-mobile > ul {
+                display: flex;
+            }
+
+            #navbar ul li {
+                width: 100%;
+            }
+
+            #navbar ul li a {
+                display: block;
+                padding: 12px 10px;
+            }
+
+            #navbar .dropdown > ul {
+                display: none;
+                position: static;
+                min-width: 100%;
+                padding-left: 15px;
+                box-shadow: none;
+            }
+
+            #navbar .dropdown.dropdown-active > ul {
+                display: flex;
+            }
+
+            .error-main {
+                padding-top: 120px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #header .logo img {
+                max-width: 155px;
+                max-height: 55px;
+            }
+
+            .error-main {
+                padding: 115px 15px 45px;
+            }
+
+            .error-number {
+                letter-spacing: -3px;
+            }
+
+            .error-description {
+                font-size: 15px;
+            }
+
+            .error-btn {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xl-11 d-flex align-items-center justify-content-between">
+          <h1 class="logo"><a href="index.html"><img
+            src="assets/img/logo.webp"
+            class="img-fluid rounded"
+            alt="logo"
+          />
+          </a></h1>
+          
+
+          <!-- <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="index.html">HOME</a></li>
+              <li><a class="nav-link scrollto" href="about.html">ABOUT US</a></li>
+              <li><a class="nav-link scrollto" href="careers.html">CAREERS</a></li>
+              <li><a class="nav-link scrollto " href="Contact.html">CONTACT</a></li>
+             
+              <li class="dropdown"><a href=""><span>PRODUCTS</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="reel_to_reel.html">Reel to Reel Plating </a></li>
+                  <li><a href="barrel.html">Barrel Plating </a></li>
+                  <li><a href="rack.html">Rack Plating  </a></li>
+                  <li><a href="selective.html">Selective Plating </a></li>
+                  <li><a href="reel_to_reel_selct.html">Reel to Reel Selective Plating </a></li>
+                  
+                </li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href=""><span>MORE</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="eq.html">Equipment’s </a></li>
+                  <li><a href="eq.html">Plated Parts </a></li>
+      
+                </ul>
+              </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav>-->
+          
+          <!-- .navbar  -->
+             <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto" href="index.html">HOME</a></li>
+              <li><a class="nav-link scrollto active" href="about.html">ABOUT</a></li>
+              <li class="dropdown"><a href="#solutions"><span>SOLUTIONS</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="metalworking_Fluids.html">Metalworking Fluids</a></li>
+                  <li><a href="specialty_lubricants.html">Specialty Lubricants</a></li>
+                  <li><a href="mro_lubricants.html">MRO Lubricants</a></li>
+                  <li><a href="customized_solution.html">Customized Solutions</a></li>
+                </ul>
+              </li>
+              <li><a class="nav-link scrollto" href="industries.html">INDUSTRIES</a></li>
+              <li><a class="nav-link scrollto" href="why_orovecta.html">WHY OROVECTA?</a></li>
+              <li><a class="nav-link scrollto" href="Contact.html">CONTACT</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+
+    <!-- ======= 404 Error Section ======= -->
+    <main class="error-main">
+        <div class="container text-center error-content">
+
+            <div class="error-icon mb-4">
+                <i class="bi bi-search" aria-hidden="true"></i>
+            </div>
+
+            <div class="error-number mb-3">
+                4<span>0</span>4
+            </div>
+
+            <h2 class="error-title mb-3">
+                Page Not Found!
+            </h2>
+
+            <p class="error-description mx-auto mb-4"
+               style="max-width: 600px;">
+                Sorry, the page you are looking for may have been
+                moved, deleted, or is temporarily unavailable.
+                Please return to our homepage to continue exploring
+                Orovecta.
+            </p>
+
+            <a href="index.html" class="error-btn">
+                <i class="bi bi-house-door me-2"></i>
+                Back to Home
+            </a>
+
+            <div class="mt-4">
+                <a href="Contact.html" class="error-contact">
+                    <i class="bi bi-headset me-2"></i>
+                    Contact Us
+                </a>
+            </div>
+
+        </div>
+    </main>
+    <!-- End 404 Error Section -->
+
+
+    <!-- ======= Existing Website Footer ======= -->
+ <footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-info">
+          
+          <h2 ><span style="color: #FEC513; font-weight: bold;">About</span>  Orovecta</h2>
+          
+            <blockquote style="text-align: justify;">Orovecta is an industrial lubrication brand with over 9+ years of experience, delivering technology-driven solutions for modern manufacturing and industrial applications. 
+            Our portfolio includes Metalworking Fluids, Specialty Lubricants, and MRO Solutions, combining German technology with application expertise to enhance performance, equipment reliability, and operational efficiency. We also provide customized lubrication solutions tailored to specific industrial requirements.  
+            </blockquote>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="about.html">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="Contact.html">Contact Us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="industries.html">Industries</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="inquiry.html">Inquiry</a></li>
+          </ul>
+        </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Contact Us</h4>
+          <p> <strong>Address:</strong>
+            <i class="bi bi-geo-alt-fill"  > 1110, 11th Floor, Ekatva Onyx, Road Number 16A, Ambika Nagar No. 2, Wagle Industrial Estate, Thane West, Thane, Maharashtra 400604</i>
+            
+              <br>
+            <strong>Phone:</strong> +91 7304990126/+91 8828100128<br>
+            <strong>Email:</strong> contact@orovecta.com<br>
+          </p>
+
+          
+
+          <div class="social-links">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
+          </div>
+
+        </div>
+
+       
+<!-- Google Map Section -->
+
+<!-- Right Side: Small Google Map -->
+<div class="col-lg-3 col-md-6 footer-map">
+  <h4>Our Location</h4>
+
+  <div class="footer-map-container">
+    <!-- <iframe
+      src="https://www.google.com/maps?q=Bhayander+East,+Mumbai,+Maharashtra&output=embed"
+      width="100%"
+      height="200"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Orovecta Office Location">
+    </iframe> -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5956.1635019900095!2d72.94966104213981!3d19.195865428134027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b95376a5c8e3%3A0xe860930296f1f843!2sEkatva%20Onyx!5e1!3m2!1sen!2sin!4v1791871087921!5m2!1sen!2sin" 
+    width="600" 
+    height="0" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+  
+
+  <!-- <a
+    href="https://www.google.com/maps/search/?api=1&query=Bhayander+East+Mumbai+Maharashtra"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="footer-map-link">
+    <i class="bi bi-geo-alt-fill"></i> View on Google Maps
+  </a> -->
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+       Copyright &copy; 2026 <strong>Orovecta.com</strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+     
+      <div>  </div>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+
+    <!-- End Footer -->
+
+
+    <!-- Back to Top -->
+    <a href="#"
+       class="back-to-top d-flex align-items-center justify-content-center"
+       aria-label="Back to top">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Existing Website JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Mobile Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const navbar = document.getElementById('navbar');
+            const toggle = navbar.querySelector('.mobile-nav-toggle');
+
+            function toggleNavigation() {
+                navbar.classList.toggle('navbar-mobile');
+            }
+
+            toggle.addEventListener('click', toggleNavigation);
+
+            toggle.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleNavigation();
+                }
+            });
+
+            navbar.querySelectorAll('.dropdown > a').forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    if (window.innerWidth <= 991) {
+                        event.preventDefault();
+                        link.parentElement.classList.toggle('dropdown-active');
+                    }
+                });
+            });
+
+            navbar.querySelectorAll('ul a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (!link.parentElement.classList.contains('dropdown')) {
+                        navbar.classList.remove('navbar-mobile');
+                    }
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
